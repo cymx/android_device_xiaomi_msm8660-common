@@ -45,7 +45,7 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-    device/common/gps/gps.conf_US_SUPL:system/etc/gps.conf
+    device/common/gps/gps.conf_AS_SUPL:system/etc/gps.conf
 
 # Graphics
 PRODUCT_PACKAGES += \
@@ -76,8 +76,8 @@ PRODUCT_PACKAGES += \
     hdmid
 
 # Torch
-PRODUCT_PACKAGES += \
-    Torch
+#PRODUCT_PACKAGES += \
+#    Torch
 
 # USB
 PRODUCT_PACKAGES += \
