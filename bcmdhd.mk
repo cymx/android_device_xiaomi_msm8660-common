@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# This file is for bcmdhd wifi since so many HTC 8660 devices use it
+# This file is for bcmdhd wifi
 BOARD_LEGACY_NL80211_STA_EVENTS  := true
 BOARD_HOSTAPD_DRIVER             := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_bcmdhd

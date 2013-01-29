@@ -11,6 +11,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+# The GPS configuration appropriate for this device.
+$(call inherit-product, device/common/gps/gps_as_supl.mk)
 
 # Qualcomm scripts
 PRODUCT_COPY_FILES += \
@@ -43,10 +47,6 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8660 \
     libaudioutils
 
-# GPS
-PRODUCT_COPY_FILES += \
-    device/common/gps/gps.conf_AS_SUPL:system/etc/gps.conf
-
 # Graphics
 PRODUCT_PACKAGES += \
     copybit.msm8660 \
@@ -74,10 +74,6 @@ PRODUCT_PACKAGES += \
 # HDMI
 PRODUCT_PACKAGES += \
     hdmid
-
-# Torch
-#PRODUCT_PACKAGES += \
-#    Torch
 
 # USB
 PRODUCT_PACKAGES += \
@@ -118,3 +114,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     dev.pm.dyn_samplingrate=1 \
     ro.opengles.version=131072
+
+$(call inherit-product, build/target/product/full_base_telephony.mk)
